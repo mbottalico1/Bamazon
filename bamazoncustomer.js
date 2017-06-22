@@ -63,3 +63,7 @@ function search() {
         }
     })
 }
+
+function puschaseItem() {
+
+}
