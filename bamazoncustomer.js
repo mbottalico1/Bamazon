@@ -12,7 +12,6 @@ var connection = mysql.createConnection({
 
 connection.connect(function(err) {
     if (err) throw err;
-    queryAllData();
     search();
     printItems();
 });
@@ -55,7 +54,7 @@ function search() {
     }).then(function(answer) {
         switch (answer.action) {
             case "Find product by id":
-                search();
+                puschaseItem();
                 break;
 
             case "Number of units to purhase":
@@ -65,5 +64,19 @@ function search() {
 }
 
 function puschaseItem() {
+    inquirer.prompt({
+        name: "action",
+        type: "list",
+        message: "What do you want to do?",
+        choices: [
+            'List of available items',
+        ]
+    }).then(function(answer) {
+            switch (answer.action) {
+                case 'List of available items':
+                    queryAllData();
+                    break;
 
-}
+             }
+         })
+     }
