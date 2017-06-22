@@ -23,7 +23,6 @@ function queryAllData() {
         }
         console.log("-----------------------------------");
     });
- }
 
 function search() {
     inquirer.prompt({
