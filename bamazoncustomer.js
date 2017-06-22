@@ -60,6 +60,6 @@ function puschaseItem() {
                     queryAllData();
                     break;
 
-             }
-         })
-     }
+        }
+    })
+}
